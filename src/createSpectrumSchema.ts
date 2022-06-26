@@ -49,7 +49,7 @@ export async function createSpectrumSchema(
 
 	const spectrumSchema: SpectrumSchema = {
 		startTime,
-		endTime: endTime == -1 ? audioDuration : endTime,
+		endTime: endTime == -1 ? audioDuration * 1000 : endTime,
 		fps,
 		spectrumFrames,
 	}
