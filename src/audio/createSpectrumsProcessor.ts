@@ -16,7 +16,7 @@ export const createSpectrumsProcessor = (busesCount: number) => {
 		const spectrumReduced = spectrum.filter(skipEvery(skipIndex))
 		const peaks = getPeaks(spectrumReduced, prevPeaks)
 		const correctedSpectrum = correctPeaks(spectrumReduced, peaks)
-		const smoothSpectrum = smoothValues(correctedSpectrum, prevSpectrums)
+		const smoothSpectrum = smoothValues(correctedSpectrum, prevSpectrums).map((val) => (val < 0.001 ? 0 : val))
 		prevSpectrums = smoothSpectrum
 		prevPeaks = peaks
 

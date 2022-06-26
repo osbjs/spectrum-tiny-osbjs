@@ -42,9 +42,9 @@ export async function createSpectrumSchema(
 
 	for (let i = startIndex; i < endIndex; i++) {
 		const audioDataParser = () => bufferToUInt8(audioBuffer, i * audioDataStep, i * audioDataStep + audioDataStep)
-		const spectrumData = processSpectrum(i, audioDataParser)
+		const spectrumFrame = processSpectrum(i, audioDataParser)
 
-		spectrumFrames.push(spectrumData)
+		spectrumFrames.push(spectrumFrame)
 	}
 
 	const spectrumSchema: SpectrumSchema = {
