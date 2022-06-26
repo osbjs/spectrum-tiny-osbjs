@@ -3,7 +3,7 @@ Create spectrum helpers for tiny-osbjs.
 
 ## Install
 ```bash
-npm i spectrum-tiny-osbjs tiny osbjs
+npm i spectrum-tiny-osbjs tiny-osbjs
 ```
 
 ## Usage
