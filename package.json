@@ -1,0 +1,32 @@
+{
+	"name": "@osbjs/spectrum-tiny-osbjs",
+	"version": "1.0.0-a",
+	"description": "",
+	"main": "dist/cjs/index.js",
+	"module": "dist/es/index.js",
+	"types": "dist/types/index.d.ts",
+	"scripts": {
+		"build": "rollup -c"
+	},
+	"keywords": [
+		"osb",
+		"osu",
+		"osbjs",
+		"audio",
+		"analyzer"
+	],
+	"author": "Nanachi",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/ffmpeg-static": "^3.0.1",
+		"prettier": "^2.7.1",
+		"prettier-plugin-organize-imports": "^3.0.0",
+		"rollup": "^2.75.7",
+		"rollup-plugin-ts": "^3.0.2",
+		"ts-node": "^10.8.1",
+		"typescript": "^4.7.4"
+	},
+	"dependencies": {
+		"ffmpeg-static": "^5.0.0"
+	}
+}
