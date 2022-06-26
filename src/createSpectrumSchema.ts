@@ -2,12 +2,22 @@ import { createAudioBuffer } from 'audio/createAudioBuffer'
 import { createSpectrumsProcessor } from 'audio/createSpectrumsProcessor'
 import { writeFile } from 'fs/promises'
 import { SpectrumFrame } from 'types/SpectrumFrame'
+import { SpectrumSchema } from 'types/SpectrumSchema'
 import { bufferToUInt8 } from 'utils/bufferToUInt8'
 import { msToS } from 'utils/msToS'
 
-export async function createSpectrumFrames(
+/**
+ * Create a json file that store the audio data needed to create the spectrum effect.
+ *
+ * @param audioFilePath Full path to the audio file.
+ * @param outFilePath Output file name.
+ * @param startTime Start time in milliseconds where you want to start processing.
+ * @param endTime End time in milliseconds where you want to stop processing.
+ * @param fps Amount of "spectrum frames" per second.
+ */
+export async function createSpectrumSchema(
 	audioFilePath: string,
-	outFilePath: string,
+	outFilePath: string = 'spectrum.json',
 	startTime: number = 0,
 	endTime: number = -1,
 	fps: number = 30
@@ -37,5 +47,12 @@ export async function createSpectrumFrames(
 		spectrumFrames.push(spectrumData)
 	}
 
-	writeFile(outFilePath, JSON.stringify(spectrumFrames))
+	const spectrumSchema: SpectrumSchema = {
+		startTime,
+		endTime: endTime == -1 ? audioDuration : endTime,
+		fps,
+		spectrumFrames,
+	}
+
+	writeFile(outFilePath, JSON.stringify(spectrumSchema))
 }

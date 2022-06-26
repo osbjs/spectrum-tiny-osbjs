@@ -1,7 +1,7 @@
 {
 	"name": "@osbjs/spectrum-tiny-osbjs",
 	"version": "1.0.0-a",
-	"description": "",
+	"description": "Create spectrum helper for tiny-osbjs.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/es/index.js",
 	"types": "dist/types/index.d.ts",
@@ -29,5 +29,8 @@
 	},
 	"dependencies": {
 		"ffmpeg-static": "^5.0.0"
+	},
+	"peerDependencies": {
+		"@osbjs/tiny-osbjs": "^1.9.1"
 	}
 }

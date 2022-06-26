@@ -1,3 +1,5 @@
-export { createSpectrumFrames } from 'createSpectrumFrames'
-export { loadSpectrumFrames } from 'loadSpectrumFrames'
+export { createSpectrumSchema } from 'createSpectrumSchema'
+export { loadSpectrumSchema } from 'loadSpectrumSchema'
 export { SpectrumFrame } from 'types/SpectrumFrame'
+export { SpectrumSchema } from 'types/SpectrumSchema'
+export { extractFrom } from 'utils/extractFrom'
