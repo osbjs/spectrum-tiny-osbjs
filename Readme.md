@@ -27,6 +27,7 @@ const timestep = 1000 / fps
 const width = 20
 const maxHeight = 50
 const margin = 3
+const barCount = 20
 
 let x = -107
 
