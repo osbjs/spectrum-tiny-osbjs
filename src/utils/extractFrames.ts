@@ -9,7 +9,7 @@ import { msToS } from './msToS'
  * @param endTime Time to end the extract process.
  * @param fps Frame per second.
  */
-export function extractFrom(spectrumFrames: SpectrumFrame[], startTime: number, endTime: number, fps: number): SpectrumFrame[] {
+export function extractFrames(spectrumFrames: SpectrumFrame[], startTime: number, endTime: number, fps: number): SpectrumFrame[] {
 	const startIndex = Math.trunc(msToS(startTime) * fps),
 		endIndex = endTime == -1 ? spectrumFrames.length : Math.trunc(msToS(endTime) * fps)
 

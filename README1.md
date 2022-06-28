@@ -78,7 +78,8 @@ type SpectrumFrame = number[]
 ```
 Load schema from json file.
 
-### extractFrom
+### extractFrames
 ```ts
-function extractFrom(spectrumFrames: SpectrumFrame[], startTime: number, endTime: number, fps: number): SpectrumFrame[]
+function extractFrames(spectrumFrames: SpectrumFrame[], startTime: number, endTime: number, fps: number): SpectrumFrame[]
 ```
+Extract frames from a specific time period.
