@@ -20,7 +20,7 @@ export async function createSpectrumSchema(
 	outFilePath: string = 'spectrum.json',
 	startTime: number = 0,
 	endTime: number = -1,
-	fps: number = 30
+	fps: number = 24
 ) {
 	const audioReader = await createAudioBuffer(audioFilePath)
 	const audioBuffer = audioReader.audioBuffer
