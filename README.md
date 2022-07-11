@@ -34,7 +34,7 @@ let x = -107
 for (let i = 0; i < barCount; i++) {
 	const frames = spectrumFrames.map((frame) => frame[i])
 
-	createSprite('sb/pixel.png', 'Background', 'Centre', { x: 320, y: 240 }, () => {
+	createSprite('sb/pixel.png', 'Background', 'Centre', { x, y: 240 }, () => {
 		fadeAtTime(startTime, 1)
 		colorAtTime(startTime, { r: 255, g: 255, b: 255 })
 
