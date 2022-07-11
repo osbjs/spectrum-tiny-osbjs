@@ -38,7 +38,7 @@ for (let i = 0; i < barCount; i++) {
 		fadeAtTime(startTime, 1)
 		colorAtTime(startTime, { r: 255, g: 255, b: 255 })
 
-		for (let j = 0; j < frames.length; i++) {
+		for (let j = 0; j < frames.length; j++) {
 			scaleVec(
 				startTime + timestep * j,
 				startTime + timestep * (j + 1),
