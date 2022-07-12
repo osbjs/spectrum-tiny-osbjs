@@ -1,6 +1,6 @@
 {
 	"name": "@osbjs/spectrum-tiny-osbjs",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "Create spectrum helpers for tiny-osbjs.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/es/index.js",

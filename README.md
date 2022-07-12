@@ -60,7 +60,8 @@ async function createSpectrumSchema(
 	outFilePath: string = 'spectrum.json',
 	startTime: number = 0,
 	endTime: number = -1,
-	fps: number = 24
+	fps: number = 24,
+	barCount: number = 64
 )
 ```
 Create a json file that store the audio data needed to create the spectrum effect.

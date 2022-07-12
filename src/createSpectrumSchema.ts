@@ -13,14 +13,16 @@ import { msToS } from 'utils/msToS'
  * @param outFilePath Output file name.
  * @param startTime Start time in milliseconds where you want to start processing.
  * @param endTime End time in milliseconds where you want to stop processing.
- * @param fps Amount of "spectrum frames" per second.
+ * @param fps Number of "spectrum frames" per second.
+ * @param barCount Number of "bars" to be generated. Must be a power of 2.
  */
 export async function createSpectrumSchema(
 	audioFilePath: string,
 	outFilePath: string = 'spectrum.json',
 	startTime: number = 0,
 	endTime: number = -1,
-	fps: number = 24
+	fps: number = 24,
+	barCount: number = 64
 ) {
 	const audioReader = await createAudioBuffer(audioFilePath)
 	const audioBuffer = audioReader.audioBuffer
@@ -36,7 +38,7 @@ export async function createSpectrumSchema(
 	const startIndex = Math.trunc(msToS(startTime) * fps),
 		endIndex = endTime == -1 ? framesCount : Math.trunc(msToS(endTime) * fps)
 
-	const processSpectrum = createSpectrumsProcessor(64)
+	const processSpectrum = createSpectrumsProcessor(barCount)
 
 	const spectrumFrames: SpectrumFrame[] = []
 
