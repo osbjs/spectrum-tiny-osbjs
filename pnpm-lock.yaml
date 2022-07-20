@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@osbjs/tiny-osbjs': ^2.0.0
   '@types/ffmpeg-static': ^3.0.1
   '@types/node': 18.0.6
   ffmpeg-static: ^5.0.0
@@ -16,7 +15,6 @@ dependencies:
   ffmpeg-static: 5.0.2
 
 devDependencies:
-  '@osbjs/tiny-osbjs': 2.0.0
   '@types/ffmpeg-static': 3.0.1
   '@types/node': 18.0.6
   prettier: 2.7.1
@@ -63,10 +61,6 @@ packages:
 
   /@mdn/browser-compat-data/4.2.1:
     resolution: {integrity: sha512-EWUguj2kd7ldmrF9F+vI5hUOralPd+sdsUnYbRy33vZTuZkduC1shE9TtEMEjAQwyfyMb4ole5KtjF8MsnQOlA==}
-    dev: true
-
-  /@osbjs/tiny-osbjs/2.0.0:
-    resolution: {integrity: sha512-pHTzhk3TQu1YjvZyEogFDMym92/ALIeQgauQHWBbCRVURd8oDT8ZgMSG8LS7X2NHisOs3IaEVAERa1dQleR4Bw==}
     dev: true
 
   /@rollup/pluginutils/4.2.1:
