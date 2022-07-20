@@ -34,16 +34,16 @@ let x = -107
 for (let i = 0; i < barCount; i++) {
 	const frames = spectrumFrames.map((frame) => frame[i])
 
-	createSprite('sb/pixel.png', 'Background', 'Centre', { x, y: 240 }, () => {
-		fadeAtTime(startTime, 1)
-		colorAtTime(startTime, { r: 255, g: 255, b: 255 })
+	createSprite('sb/pixel.png', Layer.Background, Origin.Centre, [x, 240], () => {
+		fade(startTime, 1)
+		color(startTime, [255,255,255])
 
 		for (let j = 0; j < frames.length; j++) {
 			scaleVec(
 				startTime + timestep * j,
 				startTime + timestep * (j + 1),
-				{ x: width, y: frames[j] * maxHeight },
-				{ x: width, y: frames[j + 1] * maxHeight }
+				[width, frames[j] * maxHeight],
+				[width, frames[j + 1] * maxHeight]
 			)
 		}
 	})
