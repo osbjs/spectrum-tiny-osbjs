@@ -40,8 +40,7 @@ for (let i = 0; i < barCount; i++) {
 
 		for (let j = 0; j < frames.length; j++) {
 			scaleVec(
-				startTime + timestep * j,
-				startTime + timestep * (j + 1),
+				[startTime + timestep * j, startTime + timestep * (j + 1)],
 				[width, frames[j] * maxHeight],
 				[width, frames[j + 1] * maxHeight]
 			)
