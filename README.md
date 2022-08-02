@@ -11,7 +11,7 @@ Create a schema file by calling `createSpectrumSchema` in a seperate file and ex
 ```js
 // createSchema.js
 #!/usr/bin/env node
-const { createSpectrumSchema } = require('@osbjs/spectrum-tiny-osbjs')
+import { createSpectrumSchema } from '@osbjs/spectrum-tiny-osbjs'
 
 createSpectrumSchema('path/to/audio/file')
 // and then call `node createSchema` 1 time.
@@ -19,7 +19,7 @@ createSpectrumSchema('path/to/audio/file')
 
 Spectrum schema contains info on start time, end time, amount of frame-per-second and spectrum "frames", each frame contains 64 numbers between 0 and 1 that can be used to scale the spectrum bar. Example of how to create a simple spectrum effect:
 ```js
-const { loadSpectrumSchema } = require('@osbjs/spectrum-tiny-osbjs')
+import { loadSpectrumSchema } from '@osbjs/spectrum-tiny-osbjs'
 
 const { startTime, endTime, fps, spectrumFrames } = loadSpectrumSchema(schemaPath)
 
